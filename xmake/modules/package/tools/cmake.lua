@@ -413,8 +413,8 @@ function _get_configs_for_cross(package, configs, opt)
     -- avoid find and add system include/library path
     -- @see https://github.com/xmake-io/xmake/issues/2037
     envs.CMAKE_FIND_ROOT_PATH      = sdkdir
-    envs.CMAKE_FIND_ROOT_PATH_MODE_LIBRARY = "BOTH"
-    envs.CMAKE_FIND_ROOT_PATH_MODE_INCLUDE = "BOTH"
+    envs.CMAKE_FIND_ROOT_PATH_MODE_LIBRARY = "ONLY"
+    envs.CMAKE_FIND_ROOT_PATH_MODE_INCLUDE = "ONLY"
     envs.CMAKE_FIND_ROOT_PATH_MODE_PROGRAM = "NEVER"
     -- avoid add -isysroot on macOS
     envs.CMAKE_OSX_SYSROOT = ""
